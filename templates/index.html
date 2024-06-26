@@ -7,7 +7,7 @@
   <style>
     body {
       background-color: #111;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins' time, sans-serif;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -40,6 +40,17 @@
       margin-bottom: 10px;
     }
 
+ .datetime h2 {    
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
     .form input:focus {
       outline: none;
     }
@@ -74,6 +85,9 @@
 <body>
   <div class="container">
     <div class="title">TikTok Boost</div>
+      <center>
+    <div id="datetime"></div>
+      </center>
     <div class="form">
       <form id="boost-form">
         <input type="text" name="username" placeholder="TikTok Username" required><br>
@@ -85,9 +99,26 @@
       <div class="result-text" id="result-text"></div>
     </div>
   </div>
+  <center>
+<div id="datetime"></div>
+  </center>
+ <script>
+ 
+    // Function to display current date and time
+    function displayDateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        const dateString = now.toLocaleDateString();
+        document.getElementById('datetime').textContent = `Time: ${timeString} Date: ${dateString}`;
+    }
 
-  <script>
-    document.getElementById("boost-form").addEventListener("submit", function(event) {
+    // Update date and time every second
+    setInterval(displayDateTime, 1000);
+
+    // Initial call to display date and time
+    displayDateTime();   
+
+document.getElementById("boost-form").addEventListener("submit", function(event) {
       event.preventDefault();
       var formData = new FormData(this);
       fetch('/boost', {
