@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Boost</title>
+  <style>
+    body {
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      margin-bottom: 20px;
+    }
+
+    .form input {
+      background-color: #222;
+      color: #00FF00;
+      border: 1px solid #00FF00;
+      padding: 10px;
+      border-radius: 5px;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    .form input:focus {
+      outline: none;
+    }
+
+    .form button {
+      background-color: neonGreen;
+      color: black;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      background-color: #333;
+      padding: 15px;
+      border: 1px solid #00FF00;
+      border-radius: 5px;
+      width: 300px;
+      display: none;
+    }
+
+    .result-text {
+      font-size: 16px;
+      color: #00FF00;
+      word-wrap: break-word;
+      text-align: left;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">TikTok Boost</div>
+    <div class="form">
+      <form id="boost-form">
+        <input type="text" name="username" placeholder="TikTok Username" required><br>
+        <input type="text" name="link" placeholder="Video Link" required><br>
+        <button type="submit">Boost</button>
+      </form>
+    </div>
+    <div class="result" id="result">
+      <div class="result-text" id="result-text"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("boost-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var formData = new FormData(this);
+      fetch('/boost', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        var result = document.getElementById("result");
+        var resultText = document.getElementById("result-text");
+        resultText.textContent = data;
+        result.style.display = "block";
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
