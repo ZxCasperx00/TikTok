@@ -1,0 +1,16 @@
+def vercel_config():
+    return {
+        "version": 2,
+        "builds": [
+            {
+                "src": "./main.py",
+                "use": "@vercel/node"
+            }
+        ],
+        "routes": [
+            {
+                "src": "/(.*)",
+                "dest": "/"
+            }
+        ]
+    }
