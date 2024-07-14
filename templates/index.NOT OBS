@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Boost</title>
+  <style>
+               :root {
+            /**
+             * colors
+             */
+            /* solid */
+            --jet: darkorange;
+            --onyx: #f0f8ff;
+            --eerie-black-1: hsl(240, 2%, 13%);
+            --eerie-black-2: hsl(240, 2%, 12%);
+            --smokey-black: #f8f9fa;
+            --smokey-gray: #FAF9F6;
+            --white-1: hsl(0, 0%, 100%);
+            --white-2: hsl(0, 0%, 98%);
+            --orange-yellow-crayola: skyblue;
+            --vegas-gold: darkorange;
+            --light-gray: grey;
+            --light-gray-70: hsla(0, 0%, 84%, 0.7);
+            --bittersweet-shimmer: hsl(0, 43%, 51%);
+            }
+    body {
+      background-color: var(--smokey-black);
+      font-family: 'Poppins' time, sans-serif;
+      color: var(--light-gray);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+             .container {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            z-index: 1;
+            border-radius: 10px;
+            padding: 18px;
+            border: 0.9px solid #90A4AE;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 270px;
+            margin-top: 30px;
+            width: 100%;
+            background-color: var(--smokey-gray);
+            color: var(--light-black);
+}
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      margin-bottom: 20px;
+    }
+
+    .form input {
+      background-color: var(--smokey-gray);
+      color: #00FF00;
+      border: 1px solid #90A4AE;
+      padding: 10px;
+      border-radius: 5px;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+
+ .datetime h2 {    
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            font-size: 18px;
+            font-weight: 500;
+            color: #333333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form input:focus {
+      outline: none;
+    }
+
+    p {
+  text-align: center;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+ }
+
+    .form button {
+      background-color: #90A4AE;
+      color: var(--smokey-black);
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      background-color: #333;
+      padding: 15px;
+      border: 1px solid #00FF00;
+      border-radius: 5px;
+      width: 300px;
+      display: none;
+    }
+
+    .result-text {
+      font-size: 16px;
+      color: #00FF00;
+      word-wrap: break-word;
+      text-align: left;
+      margin-top: 10px;
+    }
+    mark {
+color: var(--jet);
+font-size: 15px;
+background-color: transparent;
+ }
+ footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+      animation: heartbeat 1.3s ease-in-out infinite;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+        }
+          @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+        .link {
+      color: #90A4AE;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .link:hover {
+      color: #FFB74D;
+    }
+    .ping-icon svg, .time-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.5rem;
+    }
+    .ping-container {
+      transition: color 0.3s ease;
+    }
+
+    .ping-good {
+      color: #10b981; 
+    }
+
+    .ping-medium {
+      color: #fbbf24; 
+    }
+
+    .ping-bad {
+      color: #ef4444; 
+    }
+
+    .dark .ping-good {
+      color: #10b981; 
+    }
+
+    .dark .ping-medium {
+      color: #fbbf24; 
+    }
+
+    .dark .ping-bad {
+      color: #ef4444; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center animated" data-animation="slideIn" style="margin-bottom: 3px; font-size: 23px; color: var(--light-gray);">TikTok Boost<mark style="font-size: 9px; color: var(--onyx); margin-top: 0px; background-color: #90A4AE; text-align: center; border-radius: 2px;"> v0.1</mark></h1>
+    <mark style="font-size: 9px; color: var(--onyx); margin-top: 0px; background-color: #90A4AE; text-align: center; border-radius: 2px;">Markdevs69</mark>
+    <br>
+    <br>
+  <!--  <div style="font-weight: bold; font-size: 12px; color: var(--light-gray); animation: heartbeat 1.3s ease-in-out infinite; opacity: 0.7; margin-top: 2px; margin-bottom: 13px;"id="ping">Ping:
+        <span class="ping-text ping-container"></span>
+    </div>
+    <!-- <h1 class="col text-center" style="font-size: 18px; margin-top: 20px; color: var(--light-gray);">Terms and Conditions and Privacy Policy</h1>-->
+            <p>Welcome to my <mark style="font-size: 12px; color: #90A4AE"> free TikTok views</mark> boosting service! I hope this platform will help you to boost your TikTok videos.</p>
+            <div style="font-weight: bold; font-size: 12px; color: var(--light-gray); animation: heartbeat 1.3s ease-in-out infinite; opacity: 0.7; margin-top: 2px; margin-bottom: 13px;"id="ping">Ping:
+        <span class="ping-text ping-container"></span>
+    </div>
+   <!--   <center>
+    <div id="datetime"></div>
+      </center>-->
+    <div class="form">
+      <form id="boost-form">
+        <input type="text" name="username" placeholder="TikTok Username" required><br>
+        <input type="text" name="link" placeholder="Video Link" required><br>
+        <button type="submit">Boost</button>
+      </form>
+    </div>
+    <div class="result" id="result">
+      <div class="result-text" id="result-text"></div>
+    </div>
+<footer>
+          <p style="color: var(--light-gray)">Made with &#128153;  by <a class="link" href="https://www.facebook.com/mark.dev69">Markdevs69</a></p>
+        </footer>
+  </div>
+<!--  <center>
+<div id="datetime"></div>
+  </center>-->
+ <script>
+
+ function measurePing() {
+      var xhr = new XMLHttpRequest();
+      var startTime, endTime;
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          endTime = Date.now();
+          var pingTime = endTime - startTime;
+          var pingElement = document.querySelector('#ping .ping-text');
+          pingElement.textContent = pingTime + " ms";
+
+          var pingContainer = document.querySelector('.ping-container');
+          if (pingTime <= 299) {
+            pingContainer.classList.remove('ping-medium', 'ping-bad');
+            pingContainer.classList.add('ping-good');
+          } else if (pingTime <= 599) {
+            pingContainer.classList.remove('ping-good', 'ping-bad');
+            pingContainer.classList.add('ping-medium');
+          } else {
+            pingContainer.classList.remove('ping-good', 'ping-medium');
+            pingContainer.classList.add('ping-bad');
+          }
+        }
+      };
+      xhr.open("GET", location.href + "?t=" + new Date().getTime());
+      startTime = Date.now();
+      xhr.send();
+    }
+    setInterval(measurePing, 1000);
+
+    // Function to display current date and time
+    function displayDateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        const dateString = now.toLocaleDateString();
+        document.getElementById('datetime').textContent = `Time: ${timeString} Date: ${dateString}`;
+    }
+
+    // Update date and time every second
+    setInterval(displayDateTime, 1000);
+
+    // Initial call to display date and time
+    displayDateTime();   
+
+document.getElementById("boost-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var formData = new FormData(this);
+      fetch('/boost', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        var result = document.getElementById("result");
+        var resultText = document.getElementById("result-text");
+        resultText.textContent = data;
+        result.style.display = "block";
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
